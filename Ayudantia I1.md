@@ -812,17 +812,31 @@ print(string_lower.islower())
     True
 
 
-## isdigit
-- isdigit() retorna True si el string contiene solo numeros, False en caso contrario
+## verificar digitos
+- Queremos ver si un string tiene solo digitos
 
 
 ```python
-print("123".isdigit())
-print("123.".isdigit())
-print("H42".isdigit())
+def solo_digitos(palabra):
+    digitos = "1234567890"
+    solo_digito = True
+    for char in palabra:
+        if char not in digitos:
+            solo_digito = False
+    return solo_digito
+            
+
+print(solo_digitos("123"))
+print(solo_digitos("H23"))
+print(solo_digitos("no tengo digito"))
 ```
 
     True
     False
     False
 
+
+
+```python
+
+```
